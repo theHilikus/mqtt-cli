@@ -38,29 +38,17 @@
     "allDeclaredMethods" : true,
     "allPublicMethods" : true,
     "fields" : [
+      { "name" : "certificates" },
+      { "name" : "certificatesFromDir" },
       { "name" : "cipherSuites" },
       { "name" : "cleanStart" },
-      { "name" : "clientSideAuthentication" },
+      { "name" : "clientCertificate" },
+      { "name" : "clientPrivateKey" },
       { "name" : "keepAlive" },
       { "name" : "password" },
       { "name" : "supportedTLSVersions" },
       { "name" : "useSsl" },
       { "name" : "user" }
-    ],
-    "methods" : [
-      { "name" : "addCACollection", "parameterTypes" : ["java.util.Collection"] },
-      { "name" : "addCAFile", "parameterTypes" : ["java.security.cert.X509Certificate"] }
-    ]
-  },
-  {
-    "name" : "com.hivemq.cli.commands.AbstractCommonFlags$ClientSideAuthentication",
-    "allDeclaredConstructors" : true,
-    "allPublicConstructors" : true,
-    "allDeclaredMethods" : true,
-    "allPublicMethods" : true,
-    "fields" : [
-      { "name" : "clientCertificate" },
-      { "name" : "clientPrivateKey" }
     ]
   },
   {
