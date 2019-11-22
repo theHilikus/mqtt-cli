@@ -38,29 +38,23 @@
     "allDeclaredMethods" : true,
     "allPublicMethods" : true,
     "fields" : [
+      { "name" : "certificates" },
+      { "name" : "certificatesFromDir" },
       { "name" : "cipherSuites" },
       { "name" : "cleanStart" },
-      { "name" : "clientSideAuthentication" },
+      { "name" : "clientCertificate" },
+      { "name" : "clientPrivateKey" },
       { "name" : "keepAlive" },
       { "name" : "password" },
       { "name" : "supportedTLSVersions" },
       { "name" : "useSsl" },
-      { "name" : "user" }
+      { "name" : "useWebSocket" },
+      { "name" : "user" },
+      { "name" : "webSocketPath" }
     ],
     "methods" : [
-      { "name" : "addCACollection", "parameterTypes" : ["java.util.Collection"] },
-      { "name" : "addCAFile", "parameterTypes" : ["java.security.cert.X509Certificate"] }
-    ]
-  },
-  {
-    "name" : "com.hivemq.cli.commands.AbstractCommonFlags$ClientSideAuthentication",
-    "allDeclaredConstructors" : true,
-    "allPublicConstructors" : true,
-    "allDeclaredMethods" : true,
-    "allPublicMethods" : true,
-    "fields" : [
-      { "name" : "clientCertificate" },
-      { "name" : "clientPrivateKey" }
+      { "name" : "setPasswordFromEnv", "parameterTypes" : ["java.nio.ByteBuffer"] },
+      { "name" : "setPasswordFromFile", "parameterTypes" : ["java.nio.ByteBuffer"] }
     ]
   },
   {
@@ -162,8 +156,8 @@
     "fields" : [
       { "name" : "base64" },
       { "name" : "printToSTDOUT" },
+      { "name" : "publishFile" },
       { "name" : "qos" },
-      { "name" : "receivedMessagesFile" },
       { "name" : "topics" },
       { "name" : "usageHelpRequested" },
       { "name" : "userProperties" },
@@ -232,8 +226,8 @@
     "fields" : [
       { "name" : "base64" },
       { "name" : "printToSTDOUT" },
+      { "name" : "publishFile" },
       { "name" : "qos" },
-      { "name" : "receivedMessagesFile" },
       { "name" : "stay" },
       { "name" : "topics" },
       { "name" : "usageHelpRequested" },
@@ -273,7 +267,6 @@
     "allPublicMethods" : true,
     "fields" : [
       { "name" : "doNotSort" },
-      { "name" : "includeDisconnectedClients" },
       { "name" : "listSubscriptions" },
       { "name" : "longOutput" },
       { "name" : "reverse" },
@@ -356,6 +349,20 @@
   },
   {
     "name" : "com.hivemq.cli.converters.DirectoryToCertificateCollectionConverter",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true
+  },
+  {
+    "name" : "com.hivemq.cli.converters.EnvVarToByteBufferConverter",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true
+  },
+  {
+    "name" : "com.hivemq.cli.converters.FileToByteBufferConverter",
     "allDeclaredConstructors" : true,
     "allPublicConstructors" : true,
     "allDeclaredMethods" : true,
@@ -511,12 +518,5 @@
       { "name" : "helpRequested" },
       { "name" : "versionRequested" }
     ]
-  },
-  {
-    "name" : "picocli.CommandLine$HelpCommand",
-    "allDeclaredConstructors" : true,
-    "allPublicConstructors" : true,
-    "allDeclaredMethods" : true,
-    "allPublicMethods" : true
   }
 ]

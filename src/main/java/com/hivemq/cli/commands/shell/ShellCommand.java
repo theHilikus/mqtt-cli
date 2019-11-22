@@ -80,6 +80,11 @@ public class ShellCommand implements Runnable {
     @CommandLine.Spec
     private @NotNull CommandLine.Model.CommandSpec spec;
 
+    //needed for pico cli - reflection code generation
+    public ShellCommand() {
+        this(null);
+    }
+
     @Inject
     ShellCommand(final @NotNull DefaultCLIProperties defaultCLIProperties) {
         this.defaultCLIProperties = defaultCLIProperties;

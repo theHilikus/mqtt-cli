@@ -39,6 +39,7 @@ public class ListClientsCommand implements Runnable, CliCommand {
 
     private final MqttClientExecutor mqttClientExecutor;
 
+    //needed for pico cli - reflection code generation
     public ListClientsCommand() {
         this(null);
     }
