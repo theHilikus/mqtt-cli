@@ -421,6 +421,7 @@ graal {
     mainClass application.mainClassName
     option '-H:+PrintClassInitialization'
     option '-H:ReflectionConfigurationFiles=tools/reflection.json'
+    option "-H:ResourceConfigurationFiles=tools/resources.json"
     option '-H:-UseServiceLoaderFeature'
     option '-H:IncludeResources="org/jline/utils/*.*'
     option '-H:IncludeResources="org/jline/terminal/*.*'
