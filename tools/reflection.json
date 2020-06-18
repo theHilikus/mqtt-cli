@@ -608,13 +608,6 @@
     "allPublicMethods": true
   },
   {
-    "name": "com.hivemq.cli.converters.FileToByteBufferConverter",
-    "allDeclaredConstructors": true,
-    "allPublicConstructors": true,
-    "allDeclaredMethods": true,
-    "allPublicMethods": true
-  },
-  {
     "name": "com.hivemq.cli.converters.FileToCertificateConverter",
     "allDeclaredConstructors": true,
     "allPublicConstructors": true,
@@ -644,6 +637,13 @@
   },
   {
     "name": "com.hivemq.cli.converters.MqttVersionConverter",
+    "allDeclaredConstructors": true,
+    "allPublicConstructors": true,
+    "allDeclaredMethods": true,
+    "allPublicMethods": true
+  },
+  {
+    "name": "com.hivemq.cli.converters.PasswordFileToByteBufferConverter",
     "allDeclaredConstructors": true,
     "allPublicConstructors": true,
     "allDeclaredMethods": true,

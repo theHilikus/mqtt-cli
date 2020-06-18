@@ -416,9 +416,12 @@ test {
  ***************/
 
 graal {
-    graalVersion '20.0.0'
+    graalVersion '20.1.0'
     outputName "${rootProject.name}"
     mainClass application.mainClassName
+    option '--enable-https'
+    option '--enable-url-protocols=https'
+    option '--enable-all-security-services'
     option '-H:+PrintClassInitialization'
     option '-H:ReflectionConfigurationFiles=tools/reflection.json'
     option "-H:ResourceConfigurationFiles=tools/resources.json"

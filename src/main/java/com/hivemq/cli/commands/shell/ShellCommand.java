@@ -79,6 +79,11 @@ public class ShellCommand implements Runnable {
     @CommandLine.Spec
     private @NotNull CommandLine.Model.CommandSpec spec;
 
+
+    public ShellCommand() {
+        this.defaultCLIProperties = null;
+    }
+
     @Inject
     ShellCommand(final @NotNull DefaultCLIProperties defaultCLIProperties) {
         this.defaultCLIProperties = defaultCLIProperties;
