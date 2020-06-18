@@ -19,7 +19,7 @@ plugins {
     id 'org.gradle.crypto.checksum' version '1.2.0'
     id "nebula.ospackage" version "8.4.1"
     id 'edu.sc.seis.launch4j' version '2.4.6'
-    id 'com.palantir.graal' version '0.6.0'
+    id 'com.palantir.graal' version '0.7.1'
     id 'de.thetaphi.forbiddenapis' version '3.0.1' apply false
     id "com.github.breadmoirai.github-release" version "2.2.12"
     id 'org.ajoberstar.git-publish' version '2.1.1'
@@ -416,7 +416,7 @@ test {
  ***************/
 
 graal {
-    graalVersion '19.2.1'
+    graalVersion '20.0.0'
     outputName "${rootProject.name}"
     mainClass application.mainClassName
     option '-H:+PrintClassInitialization'
