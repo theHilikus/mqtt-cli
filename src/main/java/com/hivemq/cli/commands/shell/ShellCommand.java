@@ -22,6 +22,7 @@ import com.hivemq.cli.DefaultCLIProperties;
 import com.hivemq.cli.MqttCLIMain;
 import com.hivemq.cli.utils.LoggerUtils;
 import org.jetbrains.annotations.NotNull;
+import org.jline.reader.EndOfFileException;
 import org.jline.reader.LineReaderBuilder;
 import org.jline.reader.MaskingCallback;
 import org.jline.reader.ParsedLine;
@@ -144,8 +145,7 @@ public class ShellCommand implements Runnable {
                     defaultCLIProperties.getLogfileDebugLevel());
             if (logfilePath != null) {
                 TERMINAL_WRITER.printf("Writing Logfile to %s\n", logfilePath);
-            }
-            else {
+            } else {
                 TERMINAL_WRITER.printf("No Logfile used - Activate logging with the 'mqtt sh -l' option\n");
             }
 
@@ -160,7 +160,7 @@ public class ShellCommand implements Runnable {
                     if (arguments.length != 0) {
                         currentCommandLine.execute(arguments);
                     }
-                } catch (final UserInterruptException e) {
+                } catch (final UserInterruptException | EndOfFileException e) {
                     Logger.trace("--- User interrupted shell ---");
                     return;
                 } catch (final Exception ex) {
@@ -224,7 +224,7 @@ public class ShellCommand implements Runnable {
 
     @Override
     public String toString() {
-        return  getClass().getSimpleName() + "{" +
+        return getClass().getSimpleName() + "{" +
                 "logfilePath=" + logfilePath +
                 ", debug=" + DEBUG +
                 ", verbose=" + VERBOSE +
