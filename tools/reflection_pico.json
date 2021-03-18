@@ -135,6 +135,7 @@
     "fields" : [
       { "name" : "contentType" },
       { "name" : "correlationData" },
+      { "name" : "logToLogfile" },
       { "name" : "message" },
       { "name" : "messageExpiryInterval" },
       { "name" : "payloadFormatIndicator" },
@@ -162,6 +163,7 @@
     "fields" : [
       { "name" : "base64" },
       { "name" : "jsonOutput" },
+      { "name" : "logToLogfile" },
       { "name" : "printToSTDOUT" },
       { "name" : "publishFile" },
       { "name" : "qos" },
@@ -176,6 +178,16 @@
       { "name" : "activateVerboseMode", "parameterTypes" : ["boolean"] },
       { "name" : "setPasswordFromEnv", "parameterTypes" : ["java.nio.ByteBuffer"] },
       { "name" : "setPasswordFromFile", "parameterTypes" : ["java.nio.ByteBuffer"] }
+    ]
+  },
+  {
+    "name" : "com.hivemq.cli.commands.hivemq.HiveMQCLICommand",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "spec" }
     ]
   },
   {
@@ -298,6 +310,7 @@
     "allDeclaredMethods" : true,
     "allPublicMethods" : true,
     "fields" : [
+      { "name" : "logToLogfile" },
       { "name" : "spec" },
       { "name" : "usageHelpRequested" },
       { "name" : "versionInfoRequested" }

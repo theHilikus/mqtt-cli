@@ -224,6 +224,9 @@
         "name": "correlationData"
       },
       {
+        "name": "logToLogfile"
+      },
+      {
         "name": "message"
       },
       {
@@ -269,6 +272,9 @@
         "name": "jsonOutput"
       },
       {
+        "name": "logToLogfile"
+      },
+      {
         "name": "printToSTDOUT"
       },
       {
@@ -291,6 +297,18 @@
       },
       {
         "name": "versionInfoRequested"
+      }
+    ]
+  },
+  {
+    "name": "com.hivemq.cli.commands.hivemq.HiveMQCLICommand",
+    "allDeclaredConstructors": true,
+    "allPublicConstructors": true,
+    "allDeclaredMethods": true,
+    "allPublicMethods": true,
+    "fields": [
+      {
+        "name": "spec"
       }
     ]
   },
@@ -496,6 +514,9 @@
     "allDeclaredMethods": true,
     "allPublicMethods": true,
     "fields": [
+      {
+        "name": "logToLogfile"
+      },
       {
         "name": "spec"
       },

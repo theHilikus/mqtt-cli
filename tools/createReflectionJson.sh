@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 java -cp ././../build/libs/mqtt-cli-4.4.0.jar picocli.codegen.aot.graalvm.ReflectionConfigGenerator \
+com.hivemq.cli.commands.shell.AbstractCommand \
 com.hivemq.cli.commands.shell.ContextPublishCommand \
 com.hivemq.cli.commands.shell.ClearScreenCommand \
 com.hivemq.cli.commands.shell.ContextDisconnectCommand \
@@ -15,6 +16,7 @@ com.hivemq.cli.commands.shell.ShellContextCommand \
 com.hivemq.cli.commands.shell.VersionCommand \
 com.hivemq.cli.commands.shell.ShellDisconnectCommand \
 com.hivemq.cli.commands.shell.ShellExitCommand \
+com.hivemq.cli.commands.hivemq.HiveMQCLICommand \
 com.hivemq.cli.commands.cli.PublishCommand \
 com.hivemq.cli.commands.cli.SubscribeCommand \
 com.hivemq.cli.commands.MqttCLICommand \
