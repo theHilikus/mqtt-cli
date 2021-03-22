@@ -17,6 +17,9 @@ com.hivemq.cli.commands.shell.VersionCommand \
 com.hivemq.cli.commands.shell.ShellDisconnectCommand \
 com.hivemq.cli.commands.shell.ShellExitCommand \
 com.hivemq.cli.commands.hivemq.HiveMQCLICommand \
+com.hivemq.cli.commands.hivemq.export.AbstractExportCommand \
+com.hivemq.cli.commands.hivemq.export.ExportCommand \
+com.hivemq.cli.commands.hivemq.export.clients.ExportClientsCommand \
 com.hivemq.cli.commands.cli.PublishCommand \
 com.hivemq.cli.commands.cli.SubscribeCommand \
 com.hivemq.cli.commands.MqttCLICommand \
